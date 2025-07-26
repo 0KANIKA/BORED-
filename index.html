@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Try This Challenge Generator</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fefefe;
+      text-align: center;
+      padding: 50px;
+      color: #222;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 12px;
+      background-color: #ef476f;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d63457;
+    }
+    #idea {
+      margin-top: 40px;
+      font-size: 1.4em;
+      background-color: #ffe8ec;
+      padding: 25px;
+      border-radius: 16px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎉 Try This Challenge!</h1>
+  <p>Feeling bored? Get a fun idea for yourself or your squad!</p>
+
+  <button onclick="giveSoloIdea()">😎 Solo Mode</button>
+  <button onclick="giveGroupIdea()">👯 Group Mode</button>
+
+  <div id="idea"></div>
+
+  <script>
+    const soloIdeas = [
+      "🎧 Make a playlist called ‘I’m the main character’ and vibe to it.",
+      "🍲 Cook maggi in hostel-style using only a kettle. Add masala. Add guilt.",
+      "📱 Send your crush a meme and pretend it was an accident.",
+      "🧘 Try 1-minute meditation. If your brain runs away, run with it.",
+      "📷 Take an aesthetic pic of your coffee and name it ‘Chai Noire’.",
+      "📝 Write a startup idea that’d be banned in 3 days.",
+      "🎬 Watch a cringe 2000s Bollywood scene. Review it seriously.",
+      "🤔 Ask ChatGPT: 'If I were a Vada Pav, what's my personality?'",
+      "🛍️ Add 5 random things to your Flipkart cart. Leave them forever.",
+      "🧹 Rearrange your desk like it’s a Pinterest setup. Real or illusion?"
+    ];
+
+    const groupIdeas = [
+      "📞 Call a random contact and tell: 'I know everything about you'",
+      "🎤 Sing old Honey Singh songs with full emotion. No laughing.",
+      "🎬 Recreate a Movie scene with dramatic zoom-ins and slow mo.",
+      "🧠 Everyone writes 1 terrible startup idea. Pitch it like Shark Tank.",
+      "🧾 Give one roommate a fake Oscar speech for ‘Best Late Sleeper’.",
+      "💃 Do a TikTok dance challenge together — but blindfolded.",
+      "📸 Do a ‘what we ordered vs what we got’ reel using hostel food.",
+      "🎓 Vote who would survive in Bigg Boss house the longest. Debate.",
+      "🧙‍♂️ Pretend someone’s a guru. Ask deep life questions. Film it.",
+      "🎲 Play truth or dare. But use ChatGPT to come up with the dares!"
+    ];
+
+    function giveSoloIdea() {
+      const index = Math.floor(Math.random() * soloIdeas.length);
+      document.getElementById("idea").innerText = soloIdeas[index];
+    }
+
+    function giveGroupIdea() {
+      const index = Math.floor(Math.random() * groupIdeas.length);
+      document.getElementById("idea").innerText = groupIdeas[index];
+    }
+  </script>
+
+</body>
+</html>
